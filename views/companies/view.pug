@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+  p
+  ol.breadcrumb
+    li.breadcrumb-item
+      a(href='/') Home
+    li.breadcrumb-item
+      a(href='/companies') Companies
+    li.breadcrumb-item.active= company.name
+
+  .row
+    .col-sm-2
+      img(src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgdmlld0JveD0iMCAwIDE0MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzE0MHgxNDAKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNWEzNTI4OTE0ZSB0ZXh0IHsgZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjEwcHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1YTM1Mjg5MTRlIj48cmVjdCB3aWR0aD0iMTQwIiBoZWlnaHQ9IjE0MCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjQ0LjAxNTYyNSIgeT0iNzQuNSI+MTQweDE0MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==').img-thumbnail
+    .col-sm-7
+      h3(style='margin-top: 0px')= company.name
+      p Founded 1983 in Los Angeles.
+      dl.dl-horizontal
+        dt Company Name
+        dd= company.name
+        dt Legal Name
+        dd= company.legalname
+        dt FTC RN
+        dd= company.RN
+        dt Company Type
+        dd= company.companytype
+        dt Brands
+        dd= company._brands
+        dd= company._id
+      p After a training at Parson’s School of Design, Beth Bowley launched her label in 1998. Before long, her designs were picked up by some of the top retailers: Henri Bendel, Barney’s and Fred Segal, among others. Her designs cater to the woman who is” young at heart and very witty and confident. She’s an intellectual babe who creates her own unique and inimitable style aesthetic.”
+    .col-sm-3
+      h4: strong Actions
+
+  .row
+    .col-sm-12
+      h3 History
+      table.table.table-condensed
+        tr
+          td October 15, 2009
+          td Created by ImportBot
+          td Initial record created, from the FTC RN Database

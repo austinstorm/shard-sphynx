@@ -1,0 +1,36 @@
+extends ../layout
+
+block content
+  .page-header(style='padding-bottom: 0px; margin-bottom: 0px')
+    h3 All Companies
+    p
+    ol.breadcrumb
+      li.breadcrumb-item
+        a(href='/') Home
+      li.breadcrumb-item.active
+        a(href='/companies') Companies
+
+  table.table.table-striped.table-bordered
+    tr
+      th RN Number
+      th Company
+      th Legal Name
+      th Company Type
+    for company in companies
+      tr
+        td
+          a(href='/companies/' + company.RN)= company.RN
+        td= company.name
+        td= company.legalname
+        td= company.companytype
+    
+  //
+    for company in companies
+      dl
+        dt= company.name
+        dd= company.legalname
+        dd= company.RN
+        dd= company.companytype
+      
+  p
+    a.btn.btn-default(href='/companies/add', role='button') Add a company »
